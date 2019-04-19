@@ -1,6 +1,6 @@
 import React from 'react';
 
-import ceramics from '../assets/img/ceramics.jpeg';
+import ceramics from '../assets/images/ceramics.jpeg';
 
 function Welcome() {
   var boardStyle = {

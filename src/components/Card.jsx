@@ -28,7 +28,7 @@ function Card(props) {
             grid-row: 1 / 4;
           }
       `}</style>
-      <img src={`../assets/img/${props.image}`}></img>
+      <img src={`../assets/images/${props.image}`}></img>
       <div style={styles}>
         <h1>{props.name}</h1>
         <h3>{props.position}</h3>

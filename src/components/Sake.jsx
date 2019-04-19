@@ -1,6 +1,8 @@
 import React from 'react';
 import Card from './Card';
 
+
+
 const cardInfo = [
   {
     image: 'ceramics.jpeg',
