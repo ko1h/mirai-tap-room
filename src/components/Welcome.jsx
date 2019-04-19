@@ -1,9 +1,15 @@
 import React from 'react';
+import ceramics from '../assets/img/ceramics.jpeg'
 
 function Welcome() {
+  var boardStyle = {
+  width: '100%',
+  height: '660px'
+
+};
   return(
     <div>
-      <h1>welcome page</h1>
+      <img style={boardStyle} src={ceramics}/>
     </div>
   );
 }
