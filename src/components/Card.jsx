@@ -29,7 +29,7 @@ function Card(props) {
             grid-row: 1 / 7;
           }
       `}</style>
-     <img src={require(`../assets/images/${props.image}`)}></img>
+      <img src={(`../assets/images/${props.image}`)}></img>
       <div style={styles}>
         <h1>{props.name}</h1>
         <h3>{props.position}</h3>
