@@ -8,19 +8,10 @@ import Error404 from './Error404';
 
 
 function App(){
-  const headerStyle = {
-    position: 'absolute'
-  };
-  const switchStyle = {
-    postion: 'absolute'
-  };
   return (
     <div>
-
-      <div style={headerStyle}>
-        <Header/>
-      </div>
-      <Switch style={switchStyle}>
+      <Header/>
+      <Switch >
         <Route exact path='/' component={Welcome} />
         <Route path='/sake' component={Sake} />
         <Route path='/contact' component={Contact} />

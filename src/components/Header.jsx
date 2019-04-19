@@ -6,9 +6,13 @@ function Header(){
     <div>
       <style jsx>{`
           div {
-            text-align: center;
-            margin: 10px;
+
             height: 50px;
+          },
+          a {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
           }
             `}</style>
       <Link to="/">HOME</Link> | <Link to="/sake">SAKE</Link> | <Link to="/contact">CONTACT</Link>
