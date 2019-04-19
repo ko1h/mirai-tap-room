@@ -9,13 +9,13 @@ function Card(props) {
     gridTemplateColumns: '40% auto',
     gridTemplateRows: 'repeat(6,100px)',
     gridGap: '10px 10px',
-    border: '1px solid black',
+    border: '3px solid black',
     backgroundColor: 'lightgray',
     margin: '0 5px'
   };
   const styles = {
     gridColumn: '2 / 3',
-    gridRow: '1 / 2',
+    gridRow: '1 / 4',
     height: '100%'
 
   };
@@ -24,8 +24,9 @@ function Card(props) {
       <style jsx>{`
           img {
             width: 100%;
+            height: 100%;
             grid-column: 1 /2;
-            grid-row: 1 / 4;
+            grid-row: 1 / 7;
           }
       `}</style>
      <img src={require(`../assets/images/${props.image}`)}></img>

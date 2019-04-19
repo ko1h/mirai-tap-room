@@ -32,7 +32,6 @@ function Sake() {
           display: flex;
           flex-direction:row;
           flex-wrap: wrap;
-          border: solid 1px red
         }
         `}</style>
       {cardInfo.map((card, index) =>
