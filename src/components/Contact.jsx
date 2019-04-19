@@ -5,7 +5,7 @@ function Contact() {
     display: 'flex',
     flexDirection: 'column',
     margin: '2% 20%'
-  }
+  };
   return(
     <div>
       <style jsx>{`
