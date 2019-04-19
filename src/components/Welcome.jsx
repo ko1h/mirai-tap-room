@@ -1,15 +1,26 @@
 import React from 'react';
-import ceramics from '../assets/img/ceramics.jpeg'
+import Header from './header';
+import ceramics from '../assets/img/ceramics.jpeg';
 
 function Welcome() {
   var boardStyle = {
-  width: '100%',
-  height: '660px'
+    width: '100%',
+    height: '100vh'
 
-};
+  };
   return(
     <div>
+      <style jsx>{`
+          img{
+            position: absolute;
+          },
+          h1 {
+            position: relative;
+            color: white;
+          }
+          `}</style>
       <img style={boardStyle} src={ceramics}/>
+      <h1>MIRAI</h1>
     </div>
   );
 }

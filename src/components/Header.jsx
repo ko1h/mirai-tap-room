@@ -6,7 +6,8 @@ function Header(){
     <div>
       <style jsx>{`
           div {
-            text-align: center;
+            display: flex;
+            justify-content: flex-end;
             margin: 10px
           }
             `}</style>
@@ -16,4 +17,3 @@ function Header(){
 }
 
 export default Header;
-

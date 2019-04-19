@@ -11,9 +11,9 @@ function App(){
     <div>
       <Header/>
       <Switch>
-      <Route exact path='/' component={Welcome} />
-      <Route path='/beer' component={Beer} />
-      <Route path='/contact' component={Contact} />
+        <Route exact path='/' component={Welcome} />
+        <Route path='/beer' component={Beer} />
+        <Route path='/contact' component={Contact} />
       </Switch>
     </div>
   );
