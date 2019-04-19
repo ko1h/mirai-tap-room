@@ -11,7 +11,7 @@ function Header(){
             margin: 10px
           }
             `}</style>
-      <Link to="/">HOME</Link> | <Link to="/beer">BEER</Link> | <Link to="/contact">CONTACT</Link>
+      <Link to="/">HOME</Link> | <Link to="/sake">SAKE</Link> | <Link to="/contact">CONTACT</Link>
     </div>
   );
 }

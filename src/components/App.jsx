@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from './Header';
 import Welcome from './Welcome';
-import Beer from './Beer';
+import Sake from './Sake';
 import Contact from './Contact';
 import { Switch, Route } from 'react-router-dom';
 
@@ -12,7 +12,7 @@ function App(){
       <Header/>
       <Switch>
         <Route exact path='/' component={Welcome} />
-        <Route path='/beer' component={Beer} />
+        <Route path='/sake' component={Sake} />
         <Route path='/contact' component={Contact} />
       </Switch>
     </div>

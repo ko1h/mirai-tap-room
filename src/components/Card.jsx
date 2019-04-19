@@ -1,53 +1,48 @@
 import React from 'react';
-import Main from './Main';
+import  PropTypes from 'prop-types';
 
-const cardInfo = [
-  {
-    image: 'anthony.jpg',
-    name: 'name area',
-    position: 'postion area they work in',
-    details: 'details about the person  1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of L'
-  },
-  {
-    image: 'nicole.jpg',
-    name: 'name area',
-    position: 'postion area they work in',
-    details: 'details about the person  1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of L'
-  },
-  {
-    image: 'john.jpg',
-    name: 'name area',
-    position: 'postion area they work in',
-    details: 'details about the person  1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of L'
-  },
-  {
-    image: 'andrew.jpg',
-    name: 'name area',
-    position: 'postion area they work in',
-    details: 'details about the person  1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of L'
-  }
-];
 
-function Card() {
-  return (
-    <div>
+function Card(props) {
+  const mainStyle ={
+    display: 'grid',
+    width: '48%',
+    gridTemplateColumns: '40% auto',
+    gridTemplateRows: 'repeat(4,100px)',
+    gridGap: '10px 10px',
+    border: '1px solid black',
+    backgroundColor: 'lightgray'
+  };
+  const styles = {
+    gridColumn: '2 / 3',
+    gridRow: '1 / 2',
+    height: '100%'
+
+  };
+  return(
+    <div style={mainStyle}>
       <style jsx>{`
-        div{
-          display: flex;
-          flex-direction:row;
-          flex-wrap: wrap;
-          border: solid 1px red
-        }
-        `}</style>
-      {cardInfo.map((main, index) =>
-        <Main image={main.image}
-          name={main.name}
-          position={main.position}
-          details={main.details}
-          key={index}/>
-      )}
+          img {
+            width: 100%;
+            height: 100%;
+            grid-column: 1 /2;
+            grid-row: 1 / 4;
+          }
+      `}</style>
+      <img src={`../assets/img/${props.image}`}></img>
+      <div style={styles}>
+        <h1>{props.name}</h1>
+        <h3>{props.position}</h3>
+        <p>{props.details}</p>
+      </div>
     </div>
   );
 }
+
+Card.propTypes = {
+  image: PropTypes.string,
+  name: PropTypes.string.isRequired,
+  position: PropTypes.string.isRequired,
+  details: PropTypes.string.isRequired
+};
 
 export default Card;
