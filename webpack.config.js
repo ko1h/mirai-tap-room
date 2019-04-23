@@ -1,3 +1,4 @@
+
 const webpack = require('webpack');
 const { resolve } = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -8,7 +9,7 @@ module.exports = {
     'react-hot-loader/patch',
     'webpack-dev-server/client?http://localhost:8080',
     'webpack/hot/only-dev-server',
-    resolve(__dirname, "src", "index.jsx")
+    resolve(__dirname, "src","index.jsx")
   ],
 
   output: {
@@ -18,7 +19,7 @@ module.exports = {
   },
 
   resolve: {
-    extensions: ['.js', '.jsx']
+    extensions: [ '.js', '.jsx' ]
   },
 
   devtool: '#source-map',
@@ -30,41 +31,18 @@ module.exports = {
   },
 
   module: {
-    loaders: [
-            {
-                test: /\.js$/,
-                loader: 'babel-loader',
-                query: {
-                    presets: ['es2015', 'react']
-                }
-            }
-        ],
     rules: [
       {
-         test: /\.scss$/,
-         use: ['style-loader', 'css-loader', 'sass-loader']
-      },
-      {
-        test: /\.(png|gif|jp(e*)g|svg)$/,
-        use: {
-          loader: 'url-loader',
-          options: {
-            limit: 8000,
-            name: 'images/[hash]-[name].[ext]'
-          }
+      test: /\.jsx?$/,
+      enforce: "pre",
+      loader: "eslint-loader",
+      exclude: /node_modules/,
+      options: {
+        emitWarning: true,
+        configFile: "./.eslintrc.json"
         }
       },
       {
-        test: /\.jsx?$/,
-        enforce: "pre",
-        loader: "eslint-loader",
-        exclude: /node_modules/,
-        options: {
-          emitWarning: true,
-          configFile: "./.eslintrc.json"
-          }
-        },
-        {
         test: /\.jsx?$/,
         loader: "babel-loader",
         exclude: /node_modules/,
@@ -75,11 +53,23 @@ module.exports = {
           ],
           plugins: [
             "react-hot-loader/babel",
-            "styled-jsx/babel"
+             "styled-jsx/babel"
           ]
         }
-      }
-    ]
+      },
+      {
+        test: /\.(gif|png|jpe?g)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: 'assets/images/'
+            }
+          }
+        ]
+      },
+    ],
   },
 
   plugins: [
