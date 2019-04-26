@@ -10,13 +10,12 @@ function AddList(props) {
   function handleNewTicketFormSubmission(event) {
     event.preventDefault()
     props.onNewTicketCreation({names: _names.value, brand: _brand.value, description: _description.value})
-    console.log(_names);
-    console.log(_location);
-    console.log(_issue);
+    console.log(_names)
+    console.log(_brand)
+    console.log(_description)
     _names.value = ''
     _brand.value = ''
     _description.value = ''
-
   }
 
   return(
@@ -45,5 +44,6 @@ function AddList(props) {
 AddList.propTypes = {
   onNewTicketCreation: PropTypes.func
 }
+
 
 export default AddList

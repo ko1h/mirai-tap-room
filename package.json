@@ -12,6 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "file": "^0.2.2",
     "loader": "^2.1.1",
     "prop-types": "^15.5.10",
     "react": "^15.5.4",
@@ -30,6 +31,7 @@
     "eslint-plugin-react": "^7.12.4",
     "file-loader": "^1.1.6",
     "html-webpack-plugin": "^2.29.0",
+    "react-autocomplete-cli": "0.0.3",
     "react-hot-loader": "^3.0.0-beta.7",
     "url-loader": "^0.6.2",
     "webpack": "^3.4.0",
