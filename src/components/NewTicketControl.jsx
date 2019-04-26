@@ -1,5 +1,6 @@
 import React from 'react';
-import AddList from './AddList';
+import SakeList from './SakeList';
+import PropTypes from 'prop-types';
 
 class NewTicketControl extends React.Component {
 
@@ -8,22 +9,28 @@ class NewTicketControl extends React.Component {
     this.state = {
       formVisibleOnPage: false
     };
-    this.handleClick = this.handleClick.bind(this);
+    this.handleTroubleshootingConfirmation = this.handleTroubleshootingConfirmation.bind(this);
   }
 
-  handleClick(){
+  handleTroubleshootingConfirmation(){
     this.setState({formVisibleOnPage: true});
-    console.log('formVisibleOnPage is currently set to:' + this.state.formVisibleOnPage);
   }
 
   render(){
+    let currentlyVisibleContent = null;
+    if (this.state.formVisibleOnPage){
+      currentlyVisibleContent = <SakeList onNewTicketCreation={this.props.onNewTicketCreation}/>;
+    }
     return (
       <div>
-        <p>This is the NewTicketControl component!</p>
-        <strong onClick={this.handleClick}>Click me to change my state!</strong>
+        {currentlyVisibleContent}
       </div>
     );
   }
 }
+
+NewTicketControl.propTypes = {
+  onNewTicketCreation: PropTypes.func
+};
 
 export default NewTicketControl;
