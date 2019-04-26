@@ -16,6 +16,7 @@ function Footer() {
             `}</style>
 
           <Link to="/addList">ADD LIST</Link>
+          <Link to="/newticket">Create Ticket</Link>
     </div>
   )
 }

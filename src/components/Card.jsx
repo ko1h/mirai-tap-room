@@ -33,7 +33,9 @@ function Card(props) {
         <h1>{props.name}</h1>
         <h3>{props.position}</h3>
         <p>{props.details}</p>
+        
         <Link to="/cart"><button><a>Buy</a></button></Link>
+        <Link to="/addList"><button><a>Add</a></button></Link>
         <Link to="/edit"><button><a>Edit</a></button></Link>
       </div>
     </div>

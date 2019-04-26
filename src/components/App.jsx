@@ -6,6 +6,7 @@ import Sake from './Sake'
 import Contact from './Contact'
 import AddList from './AddList'
 import Edit from './Edit'
+import NewTicketControl from './NewTicketControl';
 import { Switch, Route } from 'react-router-dom'
 import Error404 from './Error404'
 
@@ -24,6 +25,7 @@ function App(){
       <Switch >
         <Route exact path='/' component={Welcome} />
         <Route path='/sake' component={Sake} />
+        <Route path='/newticket' component={NewTicketControl} />
         <Route path='/contact' component={Contact} />
         <Route path='/addList' component={AddList} />
         <Route path='/edit' component={Edit} />
