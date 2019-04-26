@@ -1,11 +1,11 @@
-import React from 'react';
+import React from 'react'
 
 function Contact() {
   const contactStyles = {
     display: 'flex',
     flexDirection: 'column',
     margin: '2% 20%'
-  };
+  }
   return(
     <div>
       <style jsx>{`
@@ -28,7 +28,7 @@ function Contact() {
         <button type="submit">submit</button>
       </div>
     </div>
-  );
+  )
 }
 
-export default Contact;
+export default Contact

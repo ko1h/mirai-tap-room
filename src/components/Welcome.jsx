@@ -1,13 +1,13 @@
-import React from 'react';
+import React from 'react'
 
-import ceramics from '../assets/images/ceramics.jpeg';
+import ceramics from '../assets/images/ceramics.jpeg'
 
 function Welcome() {
   var boardStyle = {
     width: '100%',
     height: '100vh'
 
-  };
+  }
   return(
     <div>
       <style jsx>{`
@@ -22,7 +22,7 @@ function Welcome() {
       <img style={boardStyle} src={ceramics}/>
       <h1>MIRAI</h1>
     </div>
-  );
+  )
 }
 
-export default Welcome;
+export default Welcome

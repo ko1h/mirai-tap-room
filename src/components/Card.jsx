@@ -1,6 +1,5 @@
-import React from 'react';
-import  PropTypes from 'prop-types';
-
+import React from 'react'
+import  PropTypes from 'prop-types'
 
 function Card(props) {
   const mainStyle ={
@@ -12,11 +11,11 @@ function Card(props) {
     // border: '3px solid black',
     // backgroundColor: 'lightgray',
     margin: '10px 5px'
-  };
+  }
   const cardInfo ={
     gridColumn: '2 /3',
     gridRow: '1 / 3',
-  };
+  }
   return(
     <div style={mainStyle}>
       <style jsx>{`
@@ -34,7 +33,7 @@ function Card(props) {
         <p>{props.details}</p>
       </div>
     </div>
-  );
+  )
 }
 
 Card.propTypes = {
@@ -42,6 +41,6 @@ Card.propTypes = {
   name: PropTypes.string.isRequired,
   position: PropTypes.string.isRequired,
   details: PropTypes.string.isRequired
-};
+}
 
-export default Card;
+export default Card

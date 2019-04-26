@@ -1,5 +1,5 @@
-import React from 'react';
-import Card from './Card';
+import React from 'react'
+import Card from './Card'
 
 
 
@@ -16,7 +16,7 @@ const cardInfo = [
     position: 'postion area they work in',
     details: 'details about the person  1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of L'
   }
-];
+]
 
 function Sake() {
   return (
@@ -37,7 +37,7 @@ function Sake() {
           key={index}/>
       )}
     </div>
-  );
+  )
 }
 
-export default Sake;
+export default Sake

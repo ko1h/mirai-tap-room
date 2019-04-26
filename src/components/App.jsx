@@ -1,10 +1,10 @@
-import React from 'react';
-import Header from './Header';
-import Welcome from './Welcome';
-import Sake from './Sake';
-import Contact from './Contact';
-import { Switch, Route } from 'react-router-dom';
-import Error404 from './Error404';
+import React from 'react'
+import Header from './Header'
+import Welcome from './Welcome'
+import Sake from './Sake'
+import Contact from './Contact'
+import { Switch, Route } from 'react-router-dom'
+import Error404 from './Error404'
 
 
 function App(){
@@ -18,6 +18,6 @@ function App(){
         <Route component={Error404} />
       </Switch>
     </div>
-  );
+  )
 }
-export default App;
+export default App
