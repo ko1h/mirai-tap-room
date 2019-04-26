@@ -1,31 +1,42 @@
 import React from 'react'
 
 function AddList() {
+  let _names = null;
+  let _brand = null;
+  let _description = null;
+
+
+  function handleNewTicketFormSubmission(event) {
+    event.preventDefault();
+    console.log(_names.value);
+    console.log(_brand.value);
+    console.log(_description.value);
+    _names.value = ''
+    _brand.value = ''
+    _description.value = ''
+  }
+
   return(
     <div>
-      <form>
-        <h1>"Add new sake to the list"</h1>
-          <p>Upload image</p>
-          <button>Upload</button>
-        <input
-          type='img'
-          id='images'
-          placeholder='image place'/>
+      <form onSubmit={handleNewTicketFormSubmission}>
         <input
           type='text'
           id='names'
-          placeholder='Pair Names'/>
+          placeholder='Pair Names'
+          ref={(input) => {_names = input;}}/>
         <input
           type='text'
           id='brand'
-          placeholder='brand'/>
+          placeholder='brand'
+          ref={(input) => {_brand = input;}}/>
         <textarea
           id='description'
-          placeholder='Describe the sake.'/>
+          placeholder='Describe the sake.'
+          ref={(input) => {_description = input;}}/>
         <button type='submit'>Add!</button>
       </form>
     </div>
-  )
+  );
 }
 
 export default AddList

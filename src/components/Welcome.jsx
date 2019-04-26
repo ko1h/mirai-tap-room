@@ -5,8 +5,7 @@ import ceramics from '../assets/images/ceramics.jpeg'
 function Welcome() {
   var boardStyle = {
     width: '100%',
-    height: '100vh'
-
+    height: '80vh'
   }
   return(
     <div>

@@ -14,6 +14,7 @@ function Footer() {
             align-items: center;
           }
             `}</style>
+
           <Link to="/addList">ADD LIST</Link>
     </div>
   )
