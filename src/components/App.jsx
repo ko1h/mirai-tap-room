@@ -10,6 +10,12 @@ import Error404 from './Error404'
 function App(){
   return (
     <div>
+      <style global jsx>{`
+        body {
+            margin: 0;
+            padding: 0;
+            }    
+      `}</style>
       <Header/>
       <Switch >
         <Route exact path='/' component={Welcome} />
