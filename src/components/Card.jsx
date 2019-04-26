@@ -1,7 +1,5 @@
 import React from 'react'
 import  PropTypes from 'prop-types'
-import { Link } from 'react-router-dom'
-
 
 function Card(props) {
   const mainStyle ={
@@ -33,10 +31,6 @@ function Card(props) {
         <h1>{props.name}</h1>
         <h3>{props.position}</h3>
         <p>{props.details}</p>
-        
-        <Link to="/cart"><button><a>Buy</a></button></Link>
-        <Link to="/addList"><button><a>Add</a></button></Link>
-        <Link to="/edit"><button><a>Edit</a></button></Link>
       </div>
     </div>
   )

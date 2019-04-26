@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types';
 
 function AddList() {
   let _names = null;
@@ -8,9 +9,7 @@ function AddList() {
 
   function handleNewTicketFormSubmission(event) {
     event.preventDefault();
-    console.log(_names.value);
-    console.log(_brand.value);
-    console.log(_description.value);
+    props.onNewTicketCreation({names: _names.value, location: _location.value, issue: _issue.value});
     _names.value = ''
     _brand.value = ''
     _description.value = ''
@@ -38,5 +37,9 @@ function AddList() {
     </div>
   );
 }
+
+AddList.propTypes = {
+  onNewTicketCreation: PropTypes.func
+};
 
 export default AddList

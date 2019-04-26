@@ -18,7 +18,7 @@ function Header(){
             align-items: center;
           }
             `}</style>
-          <Link to="/" style={linkStyle}>HOME</Link> | <Link to="/sake" style={linkStyle}>SAKE</Link> | <Link to="/contact" style={linkStyle}>CONTACT</Link> | <Link to="/card" style={linkStyle}>CART</Link>
+          <Link to="/" style={linkStyle}>HOME</Link> | <Link to="/sakeList" style={linkStyle}>SAKE</Link> | <Link to="/contact" style={linkStyle}>CONTACT</Link> | <Link to="/card" style={linkStyle}>CART</Link>
     </div>
   )
 }

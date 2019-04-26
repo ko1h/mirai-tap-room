@@ -2,7 +2,7 @@ import React from 'react'
 import Header from './Header'
 import Footer from './Footer'
 import Welcome from './Welcome'
-import Sake from './Sake'
+import SakeList from './SakeList'
 import Contact from './Contact'
 import AddList from './AddList'
 import Edit from './Edit'
@@ -10,9 +10,24 @@ import NewTicketControl from './NewTicketControl';
 import { Switch, Route } from 'react-router-dom'
 import Error404 from './Error404'
 
+class App extends React.Component {
 
-function App(){
-  return (
+  constructor(props) {
+    super(props);
+    this.state = {
+      masterTicketList: []
+    };
+    this.handleAddingNewTicketToList = this.handleAddingNewTicketToList.bind(this);
+  }
+
+  handleAddingNewTicketToList(newTicket){
+    var newMasterTicketList = this.state.masterTicketList.slice();
+    newMasterTicketList.push(newTicket);
+    this.setState({masterTicketList: newMasterTicketList});
+  }
+
+  render(){
+    return (
     <div>
       <style global jsx>{`
         body {
@@ -24,14 +39,16 @@ function App(){
       <Footer/>
       <Switch >
         <Route exact path='/' component={Welcome} />
-        <Route path='/sake' component={Sake} />
-        <Route path='/newticket' component={NewTicketControl} />
+        <Route path='/sakeList' render={()=><SakeList sakeList={this.state.masterSakeList} />} />
+        <Route path='/newticket' render={()=><NewTicketControl onNewTicketCreation={this.handleAddingNewTicketToList} />} />
         <Route path='/contact' component={Contact} />
         <Route path='/addList' component={AddList} />
         <Route path='/edit' component={Edit} />
         <Route component={Error404} />
       </Switch>
     </div>
-  )
+  );
+  }
+
 }
 export default App
