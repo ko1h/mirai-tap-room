@@ -9,14 +9,11 @@ function AddList(props) {
 
   function handleNewTicketFormSubmission(event) {
   event.preventDefault();
-  console.log(_names.value);
-  console.log(_brand.value);
-  console.log(_description.value);
-  props.onNewTicketCreation({names: _names.value, brand: _brand.value, description: _description.value});
+  props.onNewSakeCreation({names: _names.value, brand: _brand.value, description: _description.value});
   _names.value = '';
   _brand.value = '';
   _description.value = '';
-
+  console.log(_name.vaule)
   }
 
   return(
@@ -43,7 +40,7 @@ function AddList(props) {
   }
 
   AddList.propTypes = {
-    onNewTicketCreation: PropTypes.func
+    onNewSakeCreation: PropTypes.func
   };
 
 

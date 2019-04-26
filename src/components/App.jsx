@@ -33,6 +33,7 @@ class App extends React.Component {
         body {
             margin: 0;
             padding: 0;
+            background-color: lightgray;
             }
       `}</style>
         <Header/>
@@ -40,7 +41,7 @@ class App extends React.Component {
         <Switch >
           <Route exact path='/' component={Welcome} />
           <Route path='/sakeList' render={()=><SakeList sakeList={this.state.masterSakeList} />} />
-          <Route path='/newticket' render={()=><NewTicketControl onNewTicketCreation={this.handleAddingNewTicketToList} />} />
+          <Route path='/newticket' render={()=><NewTicketControl onNewSakeCreation={this.handleAddingNewTicketToList} />} />
           <Route path='/contact' component={Contact} />
           <Route path='/addList' component={AddList} />
           <Route path='/edit' component={Edit} />
