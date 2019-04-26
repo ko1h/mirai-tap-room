@@ -1,4 +1,5 @@
 import React from 'react';
+import AddList from './AddList';
 
 class NewTicketControl extends React.Component {
 
@@ -7,10 +8,12 @@ class NewTicketControl extends React.Component {
     this.state = {
       formVisibleOnPage: false
     };
+    this.handleClick = this.handleClick.bind(this);
   }
 
   handleClick(){
-    console.log('Hey, you clicked me! I do not have code to change my state quite yet, but I will in a moment!');
+    this.setState({formVisibleOnPage: true});
+    console.log('formVisibleOnPage is currently set to:' + this.state.formVisibleOnPage);
   }
 
   render(){
