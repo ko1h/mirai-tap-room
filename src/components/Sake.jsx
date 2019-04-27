@@ -1,7 +1,7 @@
 import React from 'react'
-import  PropTypes from 'prop-types'
+import PropTypes from 'prop-types'
 
-function Card(props) {
+function Sake(props) {
   const mainStyle ={
     display: 'grid',
     width: '100%',
@@ -26,21 +26,19 @@ function Card(props) {
             grid-row: 1 / 4;
           }
       `}</style>
-      <img src={require(`../assets/images/${props.image}`)}></img>
       <div style={cardInfo}>
         <h1>{props.name}</h1>
-        <h3>{props.position}</h3>
+        <h3>{props.brand}</h3>
         <p>{props.details}</p>
       </div>
     </div>
   )
 }
 
-Card.propTypes = {
-  image: PropTypes.string,
+Sake.propTypes = {
   name: PropTypes.string.isRequired,
-  position: PropTypes.string.isRequired,
+  brand: PropTypes.string.isRequired,
   details: PropTypes.string.isRequired
 }
 
-export default Card
+export default Sake

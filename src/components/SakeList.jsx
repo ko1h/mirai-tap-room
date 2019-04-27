@@ -1,15 +1,15 @@
 import React from 'react'
-import Card from './Card'
+import Sake from './Sake'
 import PropTypes from 'prop-types'
 
 function SakeList(props) {
   return (
     <div>
-      {props.sakeList.map((card, index) =>
-        <Card image={card.image}
-          name={card.name}
-          position={card.position}
-          details={card.details}
+      <hr/>
+      {props.sakeList.map((sake, index) =>
+        <Sake name={sake.name}
+          brand={sake.brand}
+          details={sake.details}
           key={index}/>
       )}
     </div>
