@@ -1,6 +1,6 @@
 import React from 'react'
-import AddList from './AddList'
-import ConfirmationQuestions from './ConfirmationQuestions';
+import NewSakeForm from './NewSakeForm'
+import ConfirmationQuestions from './ConfirmationQuestions'
 import PropTypes from 'prop-types'
 
 class NewTicketControl extends React.Component {
@@ -20,9 +20,9 @@ class NewTicketControl extends React.Component {
   render(){
     let currentlyVisibleContent = null
     if (this.state.formVisibleOnPage){
-      currentlyVisibleContent = <AddList onNewSakeCreation={this.props.onNewSakeCreation}/>
+      currentlyVisibleContent = <NewSakeForm onNewSakeCreation={this.props.onNewSakeCreation}/>
     } else {
-        currentlyVisibleContent = <ConfirmationQuestions onTroubleshootingConfirmation={this.handleTroubleshootingConfirmation}/>;
+      currentlyVisibleContent = <ConfirmationQuestions onTroubleshootingConfirmation={this.handleTroubleshootingConfirmation}/>
     }
     return (
       <div>
