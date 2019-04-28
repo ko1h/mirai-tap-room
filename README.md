@@ -13,14 +13,25 @@
 ![](src/assets/images/wireframe.jpg)
 
 
-## Setup/Installation Requirements
+## Installation
 
-* _Use command line to clone repository_
-* _Github link https://github.com/ko1h/mirai-tap-room.git_
-* _npm install_
-* _npm run start_
+1. Go to terminal and clone this repository:
+`$ git clone git repository link`
 
+2. Change into the project directory and install npm:
+`$ npm install`
 
+3. Build the app:
+`$ npm run strart`
+
+## Completed Features
+* _Program will navigate between different pages_
+* _Program will take a new sake entree and show it in sake list_
+
+## Planned Features
+
+* _Have the user be able to import a photo with the new sake information_
+* _Add animation when customer hovers over images and also links_
 
 ## Known Bugs
 
