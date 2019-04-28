@@ -9,11 +9,12 @@ function SakeList(props) {
         div{
           background-color: #394D59;
           width: 100%;
-          height: 80vh
+          height: 100vh
         }
       `}</style>
       {props.sakeList.map((sake, index) =>
-        <Sake name={sake.name}
+        <Sake image={sake.image}
+          name={sake.name}
           brand={sake.brand}
           details={sake.details}
           key={index}/>

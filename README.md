@@ -8,7 +8,9 @@
 
 * _The purpose of this project is to have a user see which sake is available, brand, price and alcohol content_
 
-## Specs
+## Planning
+
+![](src/assets/images/wireframe.jpg)
 
 
 ## Setup/Installation Requirements

@@ -1,5 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import ceramics from '../assets/images/ceramics.jpeg';
+
 
 function Sake(props) {
   const mainStyle ={
@@ -29,6 +31,7 @@ function Sake(props) {
             color: #C1D4D9;
           }
       `}</style>
+      <img src={ceramics}/>
       <div style={cardInfo}>
         <h1>{props.name}</h1>
         <h3>{props.brand}</h3>
@@ -39,6 +42,7 @@ function Sake(props) {
 }
 
 Sake.propTypes = {
+  image: PropTypes.string,
   name: PropTypes.string.isRequired,
   brand: PropTypes.string.isRequired,
   details: PropTypes.string.isRequired
