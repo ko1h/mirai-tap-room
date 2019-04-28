@@ -3,14 +3,15 @@ import { Link } from 'react-router-dom'
 
 function Header(){
   const linkStyle ={
-      color: 'black',
+      color: '#F2EFE9',
       textDecoration: 'none'
     }
     return (
       <div>
         <style jsx>{`
             div {
-              height: 50px;
+              height: 10vh;
+              background-color: #68828C;
             },
             a {
               display: flex;
@@ -18,7 +19,7 @@ function Header(){
               align-items: center;
             }
               `}</style>
-      <Link to="/">Home</Link> | <Link to="/sakeList">Sake List</Link> | <Link to="/newSake">Add new Sake</Link>
+      <Link to="/" style={linkStyle}>Home</Link> | <Link to="/sakeList" style={linkStyle}>Sake List</Link> | <Link to="/newSake" style={linkStyle}>Add new Sake</Link>
     </div>
   )
 }

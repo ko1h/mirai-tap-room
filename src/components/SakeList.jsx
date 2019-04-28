@@ -5,7 +5,13 @@ import PropTypes from 'prop-types'
 function SakeList(props) {
   return (
     <div>
-      <hr/>
+      <style jsx>{`
+        div{
+          background-color: #394D59;
+          width: 100%;
+          height: 80vh
+        }
+      `}</style>
       {props.sakeList.map((sake, index) =>
         <Sake name={sake.name}
           brand={sake.brand}

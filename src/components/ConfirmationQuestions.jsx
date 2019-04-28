@@ -4,7 +4,13 @@ import PropTypes from 'prop-types'
 function ConfirmationQuestions(props) {
   return(
     <div>
-      <p>Have you gone through all the questions?</p>
+      <style jsx>{`
+        p {
+          margin: 0;
+          color: #C1D4D9;
+        }
+      `}</style>
+    <p>Did you want to add a new sake?</p>
       <button onClick={props.onTroubleshootingConfirmation}>Yes</button>
     </div>
   )

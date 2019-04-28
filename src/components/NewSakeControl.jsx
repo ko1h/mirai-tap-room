@@ -26,6 +26,13 @@ class NewTicketControl extends React.Component {
     }
     return (
       <div>
+        <style jsx>{`
+          div{
+            background-color: #394D59;
+            width: 100%;
+            height: 80vh
+          }
+        `}</style>
         {currentlyVisibleContent}
       </div>
     )

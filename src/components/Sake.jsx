@@ -24,6 +24,9 @@ function Sake(props) {
             height: 100%;
             grid-column: 1 /2;
             grid-row: 1 / 4;
+          },
+          div{
+            color: #C1D4D9;
           }
       `}</style>
       <div style={cardInfo}>
