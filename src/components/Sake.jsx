@@ -1,18 +1,19 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import ceramics from '../assets/images/ceramics.jpeg';
+import ceramics from '../assets/images/ceramics.jpeg'
 
 
 function Sake(props) {
   const mainStyle ={
     display: 'grid',
-    width: '100%',
+    width: '50%',
+    margin: 'auto',
     gridTemplateColumns: '40% auto',
     gridTemplateRows: 'repeat(4,80px)',
     gridGap: '10px 40px',
     // border: '3px solid black',
     // backgroundColor: 'lightgray',
-    margin: '10px 5px'
+
   }
   const cardInfo ={
     gridColumn: '2 /3',
@@ -29,6 +30,7 @@ function Sake(props) {
           },
           div{
             color: #C1D4D9;
+            align-content: center;
           }
       `}</style>
       <img src={ceramics}/>

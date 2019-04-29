@@ -4,6 +4,7 @@ import Welcome from './Welcome'
 import SakeList from './SakeList'
 import NewSakeControl from './NewSakeControl'
 import Error404 from './Error404'
+import Footer from './Footer'
 import { Switch, Route } from 'react-router-dom'
 
 class App extends React.Component {
@@ -25,6 +26,12 @@ class App extends React.Component {
   render(){
     return (
       <div>
+        <style global jsx>{`
+            body {
+              margin: 0;
+              padding: 0;
+            }
+        `}</style>
         <Header/>
         <Switch>
           <Route exact path='/' component={Welcome} />
@@ -32,6 +39,7 @@ class App extends React.Component {
           <Route path='/newSake' render={()=><NewSakeControl onNewSakeCreation={this.handleAddingNewTicketToList} />} />
           <Route component={Error404} />
         </Switch>
+        <Footer/>
       </div>
     )
   }

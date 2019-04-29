@@ -7,11 +7,12 @@ function Welcome() {
         div{
           background-color: #394D59;
           width: 100%;
-          height: 80vh
+          height: 80vh;
         },
         h1 {
           color: #C1D4D9;
           margin: 0;
+          text-align: center;
         }
       `}</style>
       <h1>MIRAI</h1>

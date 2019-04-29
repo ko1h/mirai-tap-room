@@ -2,11 +2,16 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 function Footer() {
+  const linkStyle ={
+    color: '#F2EFE9',
+    textDecoration: 'none'
+  }
   return (
     <div>
       <style jsx>{`
           div {
-            height: 50px;
+            height: 10vh;
+            background-color: #68828C;
           },
           a {
             display: flex;
@@ -15,8 +20,7 @@ function Footer() {
           }
             `}</style>
 
-      <Link to="/addList">ADD LIST</Link>
-      <Link to="/newticket">Create Ticket</Link>
+      <Link to="/newSake" style={linkStyle}>Add new Sake</Link>
     </div>
   )
 }
