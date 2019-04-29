@@ -41,7 +41,7 @@
 
 ## Known Bugs
 
-_No known bugs at this time._
+_If user adds more then three items the list will go off the background._
 
 ## Support and contact details
 

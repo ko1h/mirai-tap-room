@@ -31,13 +31,16 @@ function Header(){
               height: 40px;
               align-items: center;
             }
+            a:hover {
+              color: #F2C029;
+            }
               `}</style>
       <div>
         <img src={fan}/>
       </div>
       <div>
-        <Link to="/" style={linkStyle}>HOME</Link> |
-        <Link to="/sakeList" style={linkStyle}>SAKE LIST</Link>
+        <Link to="/" style={linkStyle}><a>HOME</a></Link> |
+        <Link to="/sakeList" style={linkStyle}><a>SAKE LIST</a></Link>
       </div>
       <div style={anchorStyle}>
         <a href="#"><img src={facebook}/></a>
