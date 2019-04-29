@@ -6,12 +6,6 @@ import NewSakeControl from './NewSakeControl'
 import Error404 from './Error404'
 import Footer from './Footer'
 import { Switch, Route } from 'react-router-dom'
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { fab } from '@fortawesome/free-brands-svg-icons'
-import { faBeer } from '@fortawesome/free-solid-svg-icons'
-
-library.add(fab, faBeer )
 
 class App extends React.Component {
 

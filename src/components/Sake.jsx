@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import ceramics from '../assets/images/ceramics.jpeg'
+import toji from '../assets/images/toji.jpeg'
 
 
 function Sake(props) {
@@ -33,7 +33,7 @@ function Sake(props) {
             align-content: center;
           }
       `}</style>
-      <img src={ceramics}/>
+      <img src={toji}/>
       <div style={cardInfo}>
         <h1>{props.name}</h1>
         <h3>{props.brand}</h3>

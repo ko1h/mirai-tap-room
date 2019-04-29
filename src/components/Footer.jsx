@@ -24,7 +24,7 @@ function Footer() {
           }
             `}</style>
 
-          <Link to="/newSake" style={linkStyle}><a>ADD NEW SAKE</a></Link>
+      <Link to="/newSake" style={linkStyle}><a>ADD NEW SAKE</a></Link>
     </div>
   )
 }
