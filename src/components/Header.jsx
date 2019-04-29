@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import fan from '../assets/images/fan.png'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 function Header(){
   const linkStyle ={
@@ -27,6 +28,9 @@ function Header(){
       <div>
         <Link to="/" style={linkStyle}>Home</Link>
         <Link to="/sakeList" style={linkStyle}>Sake List</Link>
+      </div>
+      <div>
+        <FontAwesomeIcon icon="beer" />
       </div>
     </div>
   )
