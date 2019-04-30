@@ -4,12 +4,17 @@ import PropTypes from 'prop-types'
 
 function SakeList(props) {
   return (
-    <div>
+    <div className='mainContainer'>
       <style jsx>{`
-        div{
-          background-color: #394D59;
-          width: 100%;
-          height: 100%;
+          .mainContainer{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+          }
+          div{
+            background-color: #394D59;
+            width: 100%;
+            height: 100%;
         }
       `}</style>
       {props.sakeList.map((sake, index) =>
