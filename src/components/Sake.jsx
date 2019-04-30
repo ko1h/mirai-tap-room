@@ -6,13 +6,14 @@ import toji from '../assets/images/toji.jpeg'
 function Sake(props) {
   const mainStyle ={
     display: 'grid',
-    width: '60%',
+    width: '75%',
     margin: '20px 0',
     gridTemplateColumns: '50% auto',
-    gridTemplateRows: '1fr 1fr 150px',
-    gridGap: '10px 30px',
+    gridTemplateRows: '1fr 1fr 200px',
+    gridGap: '5px 20px',
     color: '#C1D4D9',
-    border: '1px solid red'
+    border: '1px solid red',
+    paddingRight: '10px'
   }
   return(
     <div style={mainStyle}>
@@ -24,6 +25,7 @@ function Sake(props) {
             grid-row: 1 / 4;
           },
           h1 {
+            margin: 0;
             grid-column: 2 /3;
             grid-row: 1 / 1;
           },
@@ -34,13 +36,12 @@ function Sake(props) {
           p {
             grid-column: 2 /3;
             grid-row: 3 / 3;
-            border: 1px solid blue;
           }
       `}</style>
       <img src={toji}/>
       <h1>{props.name}</h1>
       <h3>{props.brand}</h3>
-      <p>{props.details}</p>
+      <span>{props.details}</span>
     </div>
   )
 }
