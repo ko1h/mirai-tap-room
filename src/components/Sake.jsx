@@ -8,12 +8,10 @@ function Sake(props) {
     display: 'grid',
     width: '50%',
     margin: 'auto',
+    paddingTop: '20px',
     gridTemplateColumns: '40% auto',
     gridTemplateRows: 'repeat(4,80px)',
-    gridGap: '10px 40px',
-    // border: '3px solid black',
-    // backgroundColor: 'lightgray',
-
+    gridGap: '10px 40px'
   }
   const cardInfo ={
     gridColumn: '2 /3',

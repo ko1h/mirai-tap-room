@@ -9,7 +9,7 @@ function SakeList(props) {
         div{
           background-color: #394D59;
           width: 100%;
-          height: 80vh;
+          height: 100%;
         }
       `}</style>
       {props.sakeList.map((sake, index) =>
