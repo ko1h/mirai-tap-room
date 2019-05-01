@@ -32,13 +32,13 @@ class App extends React.Component {
     this.handleAddingNewTicketToList = this.handleAddingNewTicketToList.bind(this)
   }
 
-  handleAddingNewTicketToList(newTicket){
+  handleAddingNewTicketToList(newTicket) {
     var newMasterTicketList = this.state.masterTicketList.slice()
     newMasterTicketList.push(newTicket)
-    this.setState({masterTicketList: newMasterTicketList})
+    this.setState({ masterTicketList: newMasterTicketList })
   }
 
-  render(){
+  render() {
     return (
       <div>
         <style global jsx>{`
@@ -47,14 +47,14 @@ class App extends React.Component {
               padding: 0;
             }
         `}</style>
-        <Header/>
+        <Header />
         <Switch>
           <Route exact path='/' component={Welcome} />
-          <Route path='/sakeList' render={()=><SakeList sakeList={this.state.masterTicketList} />} />
-          <Route path='/newSake' render={()=><NewSakeControl onNewSakeCreation={this.handleAddingNewTicketToList} />} />
+          <Route path='/sakeList' render={() => <SakeList sakeList={this.state.masterTicketList} />} />
+          <Route path='/newSake' render={() => <NewSakeControl onNewSakeCreation={this.handleAddingNewTicketToList} />} />
           <Route component={Error404} />
         </Switch>
-        <Footer/>
+        <Footer />
       </div>
     )
   }

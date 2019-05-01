@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 function ConfirmationQuestions(props) {
-  return(
+  return (
     <div>
       <style jsx>{`
         width: 100%;

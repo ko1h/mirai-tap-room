@@ -5,8 +5,8 @@ import facebook from '../assets/images/facebook.png'
 import instagram from '../assets/images/instagram.png'
 import twitter from '../assets/images/twitter.png'
 
-function Header(){
-  const linkStyle ={
+function Header() {
+  const linkStyle = {
     color: '#F2EFE9',
     textDecoration: 'none',
     hover: 'red',
@@ -36,16 +36,16 @@ function Header(){
             }
               `}</style>
       <div>
-        <img src={fan}/>
+        <img src={fan} />
       </div>
       <div>
         <Link to="/" style={linkStyle}><a>HOME</a></Link> |
         <Link to="/sakeList" style={linkStyle}><a>SAKE LIST</a></Link>
       </div>
       <div style={anchorStyle}>
-        <a href="#"><img src={facebook}/></a>
-        <a href="#"><img src={instagram}/></a>
-        <a href="#"><img src={twitter}/></a>
+        <a href="#"><img src={facebook} /></a>
+        <a href="#"><img src={instagram} /></a>
+        <a href="#"><img src={twitter} /></a>
       </div>
     </div>
   )

@@ -4,18 +4,18 @@ import toji from '../assets/images/toji.jpeg'
 
 
 function Sake(props) {
-  const mainStyle ={
+  const mainStyle = {
     display: 'grid',
     width: '75%',
     margin: '20px 0',
     gridTemplateColumns: '50% auto',
-    gridTemplateRows: '1fr 1fr 200px',
+    gridTemplateRows: '1fr 1fr 250px',
     gridGap: '5px 20px',
     color: '#C1D4D9',
     border: '1px solid red',
     paddingRight: '10px'
   }
-  return(
+  return (
     <div style={mainStyle}>
       <style jsx>{`
           img {
@@ -38,7 +38,7 @@ function Sake(props) {
             grid-row: 3 / 3;
           }
       `}</style>
-      <img src={toji}/>
+      <img src={toji} />
       <h1>{props.name}</h1>
       <h3>{props.brand}</h3>
       <span>{props.details}</span>
