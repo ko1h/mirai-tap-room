@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { v4 } from 'uuid'
 
 function NewSakeForm(props) {
   let _name = null
@@ -8,7 +9,7 @@ function NewSakeForm(props) {
 
   function handleNewSakeFormSubmission(event) {
     event.preventDefault()
-    props.onNewSakeCreation({name: _name.value, brand: _brand.value, details: _details.value})
+    props.onNewSakeCreation({name: _name.value, brand: _brand.value, details: _details.value, id: v4()})
     _name.value = ''
     _brand.value = ''
     _details.value = ''

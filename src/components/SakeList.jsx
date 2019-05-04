@@ -17,19 +17,23 @@ function SakeList(props) {
             height: 100%;
         }
       `}</style>
-      {props.sakeList.map((sake, index) =>
-        <Sake image={sake.image}
-          name={sake.name}
-          brand={sake.brand}
-          details={sake.details}
-          key={index}/>
+
+      {Object.keys(props.sakeList).map(function(sakeId, index){
+        let sake = props.sakeList[sakeId]
+        return <Sake image={sake.image}
+            name={sake.name}
+            brand={sake.brand}
+            details={sake.details}
+            id={sake.id}
+            key={index}/>
+      }
       )}
     </div>
   )
 }
 
 SakeList.propTypes = {
-  sakeList: PropTypes.array
+  sakeList: PropTypes.object
 }
 
 export default SakeList

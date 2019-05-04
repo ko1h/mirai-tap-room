@@ -50,7 +50,8 @@ Sake.propTypes = {
   image: PropTypes.string,
   name: PropTypes.string.isRequired,
   brand: PropTypes.string.isRequired,
-  details: PropTypes.string.isRequired
+  details: PropTypes.string.isRequired,
+  id: PropTypes.string
 }
 
 export default Sake
