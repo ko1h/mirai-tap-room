@@ -12,30 +12,38 @@ class App extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      masterTicketList: [
-        {
+      masterSakeList: {
+        sake1: {
           image: 'toji.jpeg',
           name: 'name area',
           brand: 'brand name',
           position: 'postion area they work in',
-          details: 'details about the person  1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of L'
+          details: 'details about the person  1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of L',
+          id: 'sake1'
         },
-        {
+        Sake2: {
           image: 'toji2.jpeg',
           name: 'name area',
           brand: 'brand name',
           position: 'postion area they work in',
-          details: 'details about the person  1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of L'
-        }
-      ]
-    }
-    this.handleAddingNewTicketToList = this.handleAddingNewTicketToList.bind(this)
+          details: 'details about the person  1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of L',
+          id: 'sake2'
+        },
+        selectSake: null,
+    };
+    this.handleAddingItem = this.handleAddingItem.bind(this)
+    this.handleRemoveItem = this.handleRemoveItem.bind(this);
   }
 
-  handleAddingNewTicketToList(newTicket) {
-    var newMasterTicketList = this.state.masterTicketList.slice()
-    newMasterTicketList.push(newTicket)
-    this.setState({ masterTicketList: newMasterTicketList })
+  handleAddingItem(newSake) {
+    var newMasterSakeList = Object.assign({}, this.state.newMasterSakeList, {[newSake.id]: newSake});
+    this.setState({ masterSakeList: newMasterSakeList });
+  }
+
+  handleRemoveItem() {
+    var newMasterSakeList = Object.assign({}, this.state.newMasterSakeList);
+    delete newMasterSakeList[this.state.selectedSake];
+    this.setState({ masterSakeList: newMasterSakeList });
   }
 
   render() {
@@ -50,8 +58,8 @@ class App extends React.Component {
         <Header />
         <Switch>
           <Route exact path='/' component={Welcome} />
-          <Route path='/sakeList' render={() => <SakeList sakeList={this.state.masterTicketList} />} />
-          <Route path='/newSake' render={() => <NewSakeControl onNewSakeCreation={this.handleAddingNewTicketToList} />} />
+          <Route path='/sakeList' render={() => <SakeList sakeList={this.state.masterSakeList} />} />
+          <Route path='/newSake' render={() => <NewSakeControl onNewSakeCreation={this.handleAddingItem} />} />
           <Route component={Error404} />
         </Switch>
         <Footer />
