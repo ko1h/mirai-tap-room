@@ -2,12 +2,11 @@ import React from 'react'
 import Header from './Header'
 import Welcome from './Welcome'
 import SakeList from './SakeList'
-import Admin from './Admin'
-import NewSakeControl from './NewSakeControl'
+import EditSakeForm from './EditSakeForm'
 import Error404 from './Error404'
-import Footer from './Footer'
-import { v4 } from 'uuid'
+import NewSakeForm from './NewSakeForm';
 import { Switch, Route } from 'react-router-dom'
+import { v4 } from 'uuid';
 
 class App extends React.Component {
 
@@ -15,38 +14,46 @@ class App extends React.Component {
     super(props)
     this.state = {
       masterSakeList: {
-        sake1: {
+        'sake1' : {
           image: 'toji.jpeg',
           name: 'name area',
           brand: 'brand name',
-          position: 'postion area they work in',
-          details: 'details about the person  1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of L',
-          id: 'sake1'
+          details: 'details about the person  1500s'
         },
-        sake2: {
+        'sake2' : {
           image: 'toji2.jpeg',
           name: 'name area',
           brand: 'brand name',
-          position: 'postion area they work in',
-          details: 'details about the person  1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of L',
-          id: 'sake2'
+          details: 'details about the person  1500s'
         }
-      },
-      selectSake: null
+      }
     }
-    this.handleAddingItem = this.handleAddingItem.bind(this)
-    this.handleRemoveItem = this.handleRemoveItem.bind(this)
+
+    this.handleAddingItem = this.handleAddingItem.bind(this);
+    this.handleEditItem = this.handleEditItem.bind(this);
+    this.handleRemoveItem = this.handleRemoveItem.bind(this);
+
   }
 
   handleAddingItem(newSake) {
-    var newMasterSakeList = Object.assign({}, this.state.newMasterSakeList, {[newSake.id]: newSake})
-    this.setState({ masterSakeList: newMasterSakeList })
+    let newSakeId = v4();
+    let newMasterSakeList = Object.assign({}, this.state.masterSakeList, {
+      [newSakeId]: newSake
+    });
+    this.setState({masterSakeList: newMasterSakeList});
   }
 
-  handleRemoveItem() {
-    var newMasterSakeList = Object.assign({}, this.state.newMasterSakeList)
-    delete newMasterSakeList[this.state.selectedSake]
-    this.setState({ masterSakeList: newMasterSakeList })
+  handleEditItem(editSakeId, editSake) {
+    let newMasterSakeList = Object.assign({}, this.state.masterSakeList, {
+      [editSakeId]: editSake
+    });
+    this.setState({masterSakeList: newMasterSakeList});
+  }
+
+  handleRemoveItem (sakeId) {
+    let newMasterSakeList = Object.assign({}, this.state.masterSakeList);
+    delete newMasterSakeList[sakeId];
+    this.setState({masterSakeList: newMasterSakeList});
   }
 
   render() {
@@ -61,12 +68,11 @@ class App extends React.Component {
         <Header />
         <Switch>
           <Route exact path='/' component={Welcome} />
-          <Route path='/sakeList' render={() => <SakeList sakeList={this.state.masterSakeList} />} />
-          <Route path='/newSake' render={() => <NewSakeControl onNewSakeCreation={this.handleAddingItem} />} />
-          <Route path='/admin' render={(props)=><Admin SakeList={this.state.masterSakeList} onDeleteSake={this.handleDeleteSake} />} />
+          <Route exact path='/sakelist' render={() =><SakeList sakeList={this.state.masterSakeList} onDeleteSake={this.handleRemoveItem} />} />
+          <Route exact path='/newSake' render={()=><NewSakeForm onNewSakeCreation={this.handleAddingItem} />} />
+          <Route exact path='/edit/:sakeId' render={(props)=><EditSakeForm path={props} selectedSakeId={props.match.params.sakeId} sakeList={this.state.masterSakeList} onEditSake={this.handleEditSake} />} />
           <Route component={Error404} />
         </Switch>
-        <Footer />
       </div>
     )
   }

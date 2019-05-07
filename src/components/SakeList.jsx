@@ -17,23 +17,24 @@ function SakeList(props) {
             height: 100%;
         }
       `}</style>
-
-      {Object.keys(props.sakeList).map(function(sakeId, index){
-        let sake = props.sakeList[sakeId]
-        return <Sake image={sake.image}
-            name={sake.name}
-            brand={sake.brand}
-            details={sake.details}
-            id={sake.id}
-            key={index}/>
-      }
-      )}
+      <h1>Our sake</h1>
+      {Object.keys(props.sakeList).map(function(sakeId) {
+        var sake = props.sakeList[sakeId]
+        return <Sake name={sake.name}
+          name={sake.name}
+          brand={sake.brand}
+          details={sake.details}
+          onDeleteSake={props.onDeleteSake}
+          sakeId={sakeId}
+          key={sakeId} />;
+      })}
     </div>
   )
 }
 
 SakeList.propTypes = {
-  sakeList: PropTypes.object
+  sakeList: PropTypes.object,
+  onDeleteSake: PropTypes.func,
 }
 
 export default SakeList

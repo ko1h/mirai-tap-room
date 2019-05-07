@@ -2,19 +2,27 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { v4 } from 'uuid'
 
-function NewSakeForm(props) {
-  let _name = null
-  let _brand = null
-  let _details = null
+class NewSakeForm extends React.Component {
 
-  function handleNewSakeFormSubmission(event) {
-    event.preventDefault()
-    props.onNewSakeCreation({name: _name.value, brand: _brand.value, details: _details.value, id: v4()})
-    _name.value = ''
-    _brand.value = ''
-    _details.value = ''
+  constructor(props){
+    super(props);
+    this.state = {
+
+    };
+  this.name = null;
+  this.brand = null;
+  this.details = null;
+  this.handleNewSakeFormSubmission= this.handleNewSakeFormSubmission.bind(this);
   }
 
+  handleNewSakeFormSubmission(e) {
+    e.preventDefault();
+    this.props.onNewSakeCreation({name: this.name.value, brand: this.brand.value, details: this.details.value});
+    this.name.value = '';
+    this.brand.value = '';
+    this.details.value = '';
+  }
+  render() {
   return(
     <div>
       <style jsx>{`
@@ -45,31 +53,32 @@ function NewSakeForm(props) {
              border: none;
            }
            `}</style>
-      <form onSubmit={handleNewSakeFormSubmission}>
+         <form onSubmit={this.handleNewSakeFormSubmission}>
         <h1>Add new Sake to the inventory</h1>
         <input
           type='text'
           id='name'
           placeholder='Sake Name'
-          ref={(input) => {_name = input}}/>
+          ref={(input) => {this.name = input}}/>
         <input
           type='text'
           id='brand'
           placeholder='brand'
-          ref={(input) => {_brand = input}}/>
+          ref={(input) => {this.brand = input}}/>
         <textarea
           type='text'
           id='details'
           placeholder='Describe the sake.'
-          ref={(input) => {_details = input}}/>
+          ref={(input) => {this.details = input}}/>
         <button type='submit'>Add!</button>
       </form>
     </div>
   )
 }
+}
 
 NewSakeForm.propTypes = {
-  onNewSakeCreation: PropTypes.func
+  onNewSakeCreation: PropTypes.func,
 }
 
 export default NewSakeForm

@@ -1,9 +1,18 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import toji from '../assets/images/toji.jpeg'
+import SakeList from './Sake';
+import { Link } from 'react-router-dom';
 
 
 function Sake(props) {
+
+  let linkPath = '/edit/' + props.sakeId;
+
+  function handleDeleteSakeClick() {
+      props.onDeleteSake(props.sakeId);
+  }
+
   const mainStyle = {
     display: 'grid',
     width: '75%',
@@ -13,10 +22,10 @@ function Sake(props) {
     gridGap: '5px 20px',
     color: '#C1D4D9',
     border: '1px solid red',
-    paddingRight: '10px'
+    paddingRight: '10px',
   }
-  return (
-    <div style={mainStyle}>
+  return(
+    <div>
       <style jsx>{`
           img {
             width: 100%;
@@ -38,20 +47,27 @@ function Sake(props) {
             grid-row: 3 / 3;
           }
       `}</style>
-      <img src={toji} />
-      <h1>{props.name}</h1>
-      <h3>{props.brand}</h3>
-      <span>{props.details}</span>
+    <div style={mainStyle}>
+        <img src={toji} />
+        <h1>{props.name}</h1>
+        <h3>{props.brand}</h3>
+        <p>{props.details}</p>
+      </div>
+      <Link to={linkPath}><button>EDIT</button></Link>
+      <button onClick={handleDeleteSakeClick}>DELETE</button>
     </div>
-  )
+
+  );
 }
 
+
 Sake.propTypes = {
-  image: PropTypes.string,
-  name: PropTypes.string.isRequired,
-  brand: PropTypes.string.isRequired,
-  details: PropTypes.string.isRequired,
-  id: PropTypes.string
-}
+  name: PropTypes.string,
+  brand: PropTypes.string,
+  details: PropTypes.string,
+  currentRouterPath: PropTypes.string,
+  sakeId: PropTypes.string.isRequired,
+  onDeleteSake: PropTypes.func,
+};
 
 export default Sake
