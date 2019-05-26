@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 
 function Sake(props) {
 
-  let linkPath = '/edit/' + props.sakeId;
+  let linkPath = '/edit' + props.sakeId;
 
   function handleDeleteSakeClick() {
       props.onDeleteSake(props.sakeId);
