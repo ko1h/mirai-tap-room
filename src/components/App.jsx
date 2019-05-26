@@ -3,6 +3,7 @@ import Header from './Header'
 import Welcome from './Welcome'
 import SakeList from './SakeList'
 import EditSakeForm from './EditSakeForm'
+import Admin from './Admin'
 import Error404 from './Error404'
 import NewSakeForm from './NewSakeForm';
 import { Switch, Route } from 'react-router-dom'
@@ -17,20 +18,20 @@ class App extends React.Component {
         '1' : {
           name: 'name area',
           brand: 'brand name',
-          details: 'details about the person  1500s'
+          details: 'details about the person  1500s',
           abv: '6.8%',
           price: '7',
-          remaining: 20
-          id: '1',
+          remaining: 20,
+          id: '1'
         },
         '2' : {
           name: 'name area',
           brand: 'brand name',
-          details: 'details about the person  1500s'
+          details: 'details about the person  1500s',
           abv: '6.8%',
           price: '7',
-          remaining: 20
-          id: '2',
+          remaining: 20,
+          id: '2'
         }
       }
     }
@@ -95,7 +96,7 @@ class App extends React.Component {
           <Route exact path='/newSake' render={()=><NewSakeForm onNewSakeCreation={this.handleAddingItem} />} />
           <Route path='/admin'
               render={(props)=><Admin
-                onNewSakeCreation={this.handleAddingItem}}
+                onNewSakeCreation={this.handleAddingItem}
                 sakeList={this.state.masterSakeList}
                 currentRouterPath={props.location.pathname}
                 onChangeSelectedSake={this.handleEditItem}
