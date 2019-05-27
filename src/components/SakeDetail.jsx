@@ -5,26 +5,26 @@ import PropTypes from 'prop-types'
 function SakeDetail(props) {
 
   function handleSellGlass(){
-    props.onSellGlass(props.selectedsake.id)
+    props.onSellGlass(props.selectedSake.id)
   }
 
   function handleSellBottle(){
-    props.onSellBottle(props.selectedsake.id)
+    props.onSellBottle(props.selectedSake.id)
   }
 
   function handleCloseItem(){
     props.onCloseItem()
   }
 
-  if(props.selectedsake.remaining < 11){
+  if(props.selectedSake.remaining < 11){
     return(
       <div>
         <div>
           <button onClick={handleCloseItem} >Close</button>
           <h2>sake Details</h2>
-          <h1>{props.selectedsake.name} - {props.selectedsake.brand}</h1>
-          <h2>{props.selectedsake.details}</h2>
-          <h4><em>{props.selectedsake.remaining}</em></h4>
+          <h1>{props.selectedSake.name} - {props.selectedSake.brand}</h1>
+          <h2>{props.selectedSake.details}</h2>
+          <h4><em>{props.selectedSake.remaining}</em></h4>
           <hr/>
           <button onClick={handleSellGlass}>Sell Glass</button>
           <button onClick={handleSellBottle}>Sell Bottle</button>
@@ -32,15 +32,15 @@ function SakeDetail(props) {
       </div>
 
     )
-  } else if (props.selectedsake.remaining < 50 && props.selectedsake.remaining > 10){
+  } else if (props.selectedSake.remaining < 50 && props.selectedSake.remaining > 10){
     return(
       <div>
         <div>
           <button onClick={handleCloseItem} >Close</button>
           <h2>sake Details</h2>
-          <h1>{props.selectedsake.name} - {props.selectedsake.brand}</h1>
-          <h2>{props.selectedsake.details}</h2>
-          <h4><em>{props.selectedsake.remaining}</em></h4>
+          <h1>{props.selectedSake.name} - {props.selectedSake.brand}</h1>
+          <h2>{props.selectedSake.details}</h2>
+          <h4><em>{props.selectedSake.remaining}</em></h4>
           <hr/>
           <button onClick={handleSellGlass}>Sell Glass</button>
           <button  onClick={handleSellBottle}>Sell Bottle</button>
@@ -53,9 +53,9 @@ function SakeDetail(props) {
         <div>
           <button onClick={handleCloseItem}>Close</button>
           <h2>sake Details</h2>
-          <h1>{props.selectedsake.name} - {props.selectedsake.brand}</h1>
-          <h2>{props.selectedsake.details}</h2>
-          <h4><em>{props.selectedsake.remaining}</em></h4>
+          <h1>{props.selectedSake.name} - {props.selectedSake.brand}</h1>
+          <h2>{props.selectedSake.details}</h2>
+          <h4><em>{props.selectedSake.remaining}</em></h4>
           <hr/>
           <button onClick={handleSellGlass}>Sell Glass</button>
           <button onClick={handleSellBottle}>Sell Bottle</button>
@@ -66,7 +66,7 @@ function SakeDetail(props) {
 }
 
 SakeDetail.propTypes = {
-  selectedsake: PropTypes.object,
+  selectedSake: PropTypes.object,
   onSellGlass: PropTypes.func,
   onSellBottle: PropTypes.func,
   onCloseItem: PropTypes.func

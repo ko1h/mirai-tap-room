@@ -39,9 +39,9 @@ function Header() {
         <img src={fan} />
       </div>
       <div>
-        <Link to="/" style={linkStyle}><a>HOME</a></Link> |
-        <Link to="/sakeList" style={linkStyle}><a>SAKE LIST</a></Link>
-        <Link to='/admin' style={linkStyle}><a>ADMIN</a></Link>
+        <Link to="/" style={linkStyle}>HOME</Link> |
+        <Link to="/sakeList" style={linkStyle}>SAKE LIST</Link>
+        <Link to='/admin' style={linkStyle}>ADMIN</Link>
       </div>
       <div style={anchorStyle}>
         <a href="#"><img src={facebook} /></a>

@@ -1,5 +1,5 @@
 import React from 'react'
-import Sake from './Sake'
+import SakeInfo from './SakeInfo'
 import PropTypes from 'prop-types'
 
 function SakeList(props) {
@@ -9,7 +9,7 @@ function SakeList(props) {
       {Object.keys(props.sakeList).map(function(sakeId)
       {
         let sake = props.sakeList[sakeId]
-        return <Sake
+        return <SakeInfo
           name = {sake.name}
           brand = {sake.brand}
           description = {sake.description}

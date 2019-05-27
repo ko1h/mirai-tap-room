@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-function Sake(props) {
+function SakeInfo(props) {
 
   function handleChangeSelectedSake(sakeId){
     props.onChangeSelectedSake(sakeId)
@@ -53,7 +53,7 @@ function Sake(props) {
   }
 }
 
-Sake.propTypes = {
+SakeInfo.propTypes = {
   name: PropTypes.string,
   brand: PropTypes.string,
   description: PropTypes.string,
@@ -65,4 +65,4 @@ Sake.propTypes = {
   currentRouterPath: PropTypes.string
 }
 
-export default Sake
+export default SakeInfo
