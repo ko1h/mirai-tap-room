@@ -1,21 +1,20 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import SakeList from './SakeList';
-import Sake from './Sake';
-import { Link } from 'react-router-dom';
+import React from 'react'
+import PropTypes from 'prop-types'
+import SakeList from './SakeList'
+import SakeDetail from './SakeDetail'
+import { Link } from 'react-router-dom'
 
 
 function Admin(props){
 
-  let optionalSelectedSakeContent = null;
-
+  let optionalSelectedSakeContent = null
   if(props.selectedSake !== null){
     optionalSelectedSakeContent = <SakeDetail
       selectedSake ={props.sakeList[props.selectedSake.sakeId]}
       onSellGlass={props.onSellGlass}
       onSellBottle={props.onSellBottle}
       onCloseItem={props.onCloseItem}
-    />;
+    />
   }
 
   return(
@@ -30,7 +29,7 @@ function Admin(props){
         onChangeSelectedSake={props.onChangeSelectedSake}
         selectedSake={props.selectedSake} />
     </div>
-  );
+  )
 }
 
 Admin.propTypes = {
@@ -42,5 +41,5 @@ Admin.propTypes = {
   onSellGlass: PropTypes.func,
   onSellBottle: PropTypes.func,
   onCloseItem: PropTypes.func
-};
-export default Admin;
+}
+export default Admin

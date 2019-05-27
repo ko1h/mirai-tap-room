@@ -41,7 +41,7 @@ function Header() {
       <div>
         <Link to="/" style={linkStyle}><a>HOME</a></Link> |
         <Link to="/sakeList" style={linkStyle}><a>SAKE LIST</a></Link>
-        <Link to='/newSake' style={linkStyle}><a>ADD SAKE</a></Link>
+        <Link to='/admin' style={linkStyle}><a>ADMIN</a></Link>
       </div>
       <div style={anchorStyle}>
         <a href="#"><img src={facebook} /></a>

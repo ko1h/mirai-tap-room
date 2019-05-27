@@ -4,29 +4,22 @@ import PropTypes from 'prop-types'
 
 function SakeList(props) {
   return (
-    <div className='mainContainer'>
-      <style jsx>{`
-          .mainContainer{
-            display: flex;
-            align-items: center;
-            flex-direction: column;
-          }
-          div{
-            background-color: #394D59;
-            width: 100%;
-            height: 100%;
-        }
-      `}</style>
+    <div>
       <h1>Our sake</h1>
-      {Object.keys(props.sakeList).map(function(sakeId) {
-        var sake = props.sakeList[sakeId]
-        return <Sake name={sake.name}
-          name={sake.name}
-          brand={sake.brand}
-          details={sake.details}
-          onDeleteSake={props.onDeleteSake}
-          sakeId={sakeId}
-          key={sakeId} />;
+      {Object.keys(props.sakeList).map(function(sakeId)
+      {
+        let sake = props.sakeList[sakeId]
+        return <Sake
+          name = {sake.name}
+          brand = {sake.brand}
+          description = {sake.description}
+          price = {sake.price}
+          abv = {sake.abv}
+          remaining = {sake.remaining}
+          key = {sakeId}
+          sakeId = {sakeId}
+          currentRouterPath={props.currentRouterPath}
+          onChangeSelectedSake={props.onChangeSelectedSake} />
       })}
     </div>
   )
@@ -34,7 +27,8 @@ function SakeList(props) {
 
 SakeList.propTypes = {
   sakeList: PropTypes.object,
-  onDeleteSake: PropTypes.func,
+  currentRouterPath: PropTypes.string,
+  onChangeSelectedSake: PropTypes.func
 }
 
 export default SakeList

@@ -14,10 +14,7 @@
   "license": "ISC",
   "dependencies": {
     "file": "^0.2.2",
-<<<<<<< HEAD
-=======
     "url-loader": "^0.6.2",
->>>>>>> 39c5fdebdba1868dedd4c27edfdafbca8e0e5c4a
     "file-loader": "^1.1.6",
     "i": "^0.3.6",
     "loader": "^2.1.1",
@@ -30,7 +27,6 @@
     "redux": "^4.0.1",
     "styled-jsx": "^3.2.1",
     "url": "^0.11.0",
-    "url-loader": "^0.6.2",
     "uuid": "^3.2.1"
   },
   "devDependencies": {
