@@ -17,7 +17,7 @@ class App extends React.Component {
       masterSakeList: {
         '1' : {
           name: 'name area',
-          brand: 'brand name',
+          brand: 'mike',
           details: 'details about the person  1500s',
           id: '1',
           abv: '6.8%',
@@ -26,7 +26,7 @@ class App extends React.Component {
         },
         '2' : {
           name: 'name area',
-          brand: 'brand name',
+          brand: 'kohichi',
           details: 'details about the person  1500s',
           id: '2',
           abv: '6.8%',
@@ -46,7 +46,6 @@ class App extends React.Component {
 
     this.handleSellBottle = this.handleSellBottle.bind(this)
 
-    this.handleRemoveItem  = this.handleRemoveItem.bind(this)
 
   }
 
@@ -106,9 +105,9 @@ class App extends React.Component {
               currentRouterPath={props.location.pathname}
               onChangeSelectedSake={this.handleEditItem}
               selectedSake={this.state.sakeId}
-              onSellPint={this.handleSellGlass}
-              onSellGrowler={this.handleSellBottle}
-              onCloseItem={this.handleRemoveItem }
+              onSellGlass={this.handleSellGlass}
+              onSellBottle={this.handleSellBottle}
+              onCloseItem={this.handleRemoveItem}
             />} />
           <Route component={Error404} />
         </Switch>

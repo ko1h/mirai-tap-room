@@ -2,7 +2,6 @@ import React from 'react'
 import NewSakeForm from './NewSakeForm'
 import AuthConfirmation from './AuthConfirmation'
 import PropTypes from 'prop-types'
-import Header from './Header'
 
 class NewSakeControl extends React.Component {
   constructor(props) {
@@ -27,7 +26,6 @@ class NewSakeControl extends React.Component {
     }
     return(
       <div>
-        <Header />
         {currentVisibleContent}
       </div>
     )
