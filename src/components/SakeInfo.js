@@ -7,16 +7,32 @@ function SakeInfo(props) {
     props.onChangeSelectedSake(sakeId)
   }
 
-  const sakeInformation =
-    <div>
-      <h3>{props.name}</h3>
-      <h5>Brand: {props.brand}</h5>
-      <h5>{props.description}</h5>
-      <h5>${props.price}</h5>
-      <h5>{props.abv} ABV</h5>
-      <h5>Glass Remaining: {props.remaining}</h5>
-    </div>
+  const mainStyle = {
+    width: '100%',
+    textAlign: 'center',
+    color: '#C1D4D9',
+    display: 'flex',
+    alignItem: 'center'
+  }
+  const mainCardStyle = {
+    margin: '10px 30px',
+    width: '200px',
+    padding: '10px',
+    backgroundColor: '#394D59',
+    border: '1px solid lightgray'
+  }
 
+  const sakeInformation =
+    <div style={mainStyle}>
+      <div style={mainCardStyle}>
+        <h1>{props.name}</h1>
+        <h3>Brand: {props.brand}</h3>
+        <h5>{props.description}</h5>
+        <h5>${props.price}</h5>
+        <h5>{props.abv} ABV</h5>
+        <h5>Glass Remaining: {props.remaining}</h5>
+      </div>
+  </div>
 
   if (props.currentRouterPath === '/admin' ){
     if(props.remaining > 50){

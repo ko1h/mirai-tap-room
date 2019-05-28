@@ -18,10 +18,28 @@ function Admin(props){
   }
 
   return(
-    <div >
-      <h2>Admin</h2>
-      <Link to='newsake'><button>Tap New Sake</button></Link>
-      {optionalSelectedSakeContent}
+    <div className='mainContainer'>
+      <style jsx>{`
+          .mainContainer{
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            background-color: #394D59;
+            text-align: center;
+            border: 1px: red solid
+          }
+          h2 {
+            margin: 0;
+          }
+          .adminStyle {
+            padding: 20px;
+          }
+         `}</style>
+       <div className="adminStyle">
+          <h2>Admin</h2>
+          <Link to='newsake'><button>Tap New Sake</button></Link>
+          {optionalSelectedSakeContent}
+      </div>
       <SakeList
         currentRouterPath={props.currentRouterPath}
         sakeList={props.sakeList}

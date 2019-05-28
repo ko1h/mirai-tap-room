@@ -3,6 +3,7 @@ import Header from './Header'
 import Welcome from './Welcome'
 import SakeList from './SakeList'
 import Admin from './Admin'
+import Footer from './Footer'
 import Error404 from './Error404'
 import { Redirect } from 'react-router-dom';
 import NewSakeControl from './NewSakeControl'
@@ -29,6 +30,33 @@ class App extends React.Component {
           brand: 'kohichi',
           details: 'details about the person  1500s',
           id: '2',
+          abv: '6.8%',
+          price: '7',
+          remaining: 20
+        },
+        '3' : {
+          name: 'name area',
+          brand: 'mike',
+          details: 'details about the person  1500s',
+          id: '3',
+          abv: '6.8%',
+          price: '7',
+          remaining: 20
+        },
+        '4' : {
+          name: 'name area',
+          brand: 'mike',
+          details: 'details about the person  1500s',
+          id: '4',
+          abv: '6.8%',
+          price: '7',
+          remaining: 20
+        },
+        '5' : {
+          name: 'name area',
+          brand: 'mike',
+          details: 'details about the person  1500s',
+          id: '5',
           abv: '6.8%',
           price: '7',
           remaining: 20
@@ -111,6 +139,7 @@ class App extends React.Component {
             />} />
           <Route component={Error404} />
         </Switch>
+        <Footer />
       </div>
     )
   }

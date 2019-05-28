@@ -32,7 +32,20 @@ function NewSakeForm(props) {
 
   }
   return(
-    <div style={formDiv}>
+      <div className='mainContainer'>
+      <style jsx>{`
+          .mainContainer{
+            align-items: center;
+            width: 100%;
+            height: 80vh;
+            background-color: #394D59;
+            text-align: center;
+            color: white;
+          }
+          p {
+            margin: 0;
+          }
+      `}</style>
       <form onSubmit={handleNewSakeFormSubmission}>
         <input
           type='text'
