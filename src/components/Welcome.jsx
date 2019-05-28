@@ -1,26 +1,26 @@
 import React from 'react'
-import fan from '../assets/images/ceramics.jpeg'
+import sake from '../assets/images/sake.jpeg'
+import Footer from './Footer'
 
 function Welcome() {
   return(
     <div>
       <style jsx>{`
-        div{
-          background-color: #394D59;
-          width: 100%;
-          height: 80vh;
-        },
-        h1 {
+        h1{
           color: #C1D4D9;
-          margin: 0;
+          position: relative;
           text-align: center;
+          margin: 0;
         },
         img {
-          height: 80px;
+          position: absolute;
+          width: 100%;
+          height: 80vh;
         }
       `}</style>
+    <img src={sake}/>
       <h1>MIRAI</h1>
-      <img src={fan}/>
+      <Footer />
     </div>
   )
 }

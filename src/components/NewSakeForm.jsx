@@ -54,7 +54,7 @@ function NewSakeForm(props) {
            padding: 5px;
          }
          button {
-           width: 25%;
+           width: 200px;
            font-size: 16px;
            border-radius: 5px;
            height: 30px;

@@ -1,9 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import fan from '../assets/images/fan.png'
-import facebook from '../assets/images/facebook.png'
-import instagram from '../assets/images/instagram.png'
-import twitter from '../assets/images/twitter.png'
+
 
 function Header() {
   const linkStyle = {
@@ -45,9 +43,7 @@ function Header() {
         <Link to="/sakeList" style={linkStyle}>SAKE LIST</Link>
       </div>
       <div style={anchorStyle}>
-        <a href="#"><img src={facebook} /></a>
-        <a href="#"><img src={instagram} /></a>
-        <a href="#"><img src={twitter} /></a>
+
       </div>
     </div>
   )

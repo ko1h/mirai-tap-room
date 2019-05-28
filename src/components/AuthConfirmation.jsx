@@ -18,7 +18,7 @@ function AuthConfirmation(props){
             margin: 10;
           }
           button {
-            width: 10%;
+            width: 100px;
             font-size: 16px;
             border-radius: 5px;
             height: 30px;

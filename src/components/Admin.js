@@ -34,6 +34,13 @@ function Admin(props){
           .adminStyle {
             padding: 20px;
           }
+          button {
+            width: 200px;
+            font-size: 16px;
+            border-radius: 5px;
+            height: 30px;
+            border: none;
+          }
          `}</style>
        <div className="adminStyle">
           <h2>Admin</h2>
