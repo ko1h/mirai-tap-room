@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { Link } from 'react-router-dom'
 
 function NewSakeForm(props) {
   let _name = null
@@ -88,7 +89,7 @@ function NewSakeForm(props) {
           placeholder='ABV'
           ref={(input) => {_abv = input}}/>
         <br/>
-        <button type='submit'>Tap New Sake</button>
+        <Link to='sakeList'><button type='submit'>Tap New Sake</button></Link>
       </form>
     </div>
   )

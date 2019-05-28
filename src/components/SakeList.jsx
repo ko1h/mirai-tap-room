@@ -21,6 +21,7 @@ function SakeList(props) {
           }
           h1 {
             margin: 0;
+            color: white;
           }
          `}</style>
        <h1>Our sake</h1>
