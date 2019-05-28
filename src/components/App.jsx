@@ -119,6 +119,7 @@ class App extends React.Component {
             body {
               margin: 0;
               padding: 0;
+              background-color: #394D59;
             }
         `}</style>
         <Header />

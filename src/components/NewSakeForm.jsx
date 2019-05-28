@@ -32,20 +32,35 @@ function NewSakeForm(props) {
 
   }
   return(
-      <div className='mainContainer'>
+    <div>
       <style jsx>{`
-          .mainContainer{
-            align-items: center;
-            width: 100%;
-            height: 80vh;
-            background-color: #394D59;
-            text-align: center;
-            color: white;
-          }
-          p {
-            margin: 0;
-          }
-      `}</style>
+        width: 100%;
+         form {
+           font-size: 16px;
+           border: 1px solid white;
+           display: flex;
+           flex-direction: column;
+           justify-content: space-around;
+           margin: auto;
+           width:50%;
+           padding: 2%;
+           color: white;
+         },
+         h1 {
+           align-self: center;
+         },
+         input {
+           margin: 5px;
+           padding: 5px;
+         }
+         button {
+           width: 25%;
+           font-size: 16px;
+           border-radius: 5px;
+           height: 30px;
+           border: none;
+         }
+         `}</style>
       <form onSubmit={handleNewSakeFormSubmission}>
         <input
           type='text'

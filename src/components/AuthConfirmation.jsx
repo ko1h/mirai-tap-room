@@ -15,7 +15,14 @@ function AuthConfirmation(props){
             color: white;
           }
           p {
-            margin: 0;
+            margin: 10;
+          }
+          button {
+            width: 10%;
+            font-size: 16px;
+            border-radius: 5px;
+            height: 30px;
+            border: none;
           }
       `}</style>
     <p>Are sure you want to submit new information?</p>

@@ -20,6 +20,8 @@ function Header() {
     <div>
       <style jsx>{`
             div {
+              position: 'absolute',
+              top: '0',
               height: 10vh;
               width: 100%;
               background-color: #68828C;

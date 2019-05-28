@@ -6,7 +6,7 @@ function Footer() {
     color: '#F2EFE9',
     textDecoration: 'none',
     hover: 'red',
-    fontSize: '1.5em'
+    fontSize: '1.5em',
   }
   const anchorStyle = {
     display: 'flex',
@@ -15,7 +15,7 @@ function Footer() {
   return (
     <div>
       <style jsx>{`
-          div {
+           div {
             height: 10vh;
             width: 100%;
             background-color: #68828C;
